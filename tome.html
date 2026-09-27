@@ -5,34 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#121212">
+<meta name="theme-color" content="#0b1622">
+<script>try { if (JSON.parse(localStorage.getItem('tome_prefs') || '{}').theme === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
 <title>TOME — Audiobook Organiser</title>
-<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiVE9NRSDigJQgQXVkaW9ib29rIE9yZ2FuaXNlciIsInNob3J0X25hbWUiOiJUT01FIiwic3RhcnRfdXJsIjoiLiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMxMjEyMTIiLCJ0aGVtZV9jb2xvciI6IiMxMjEyMTIiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyUyMHhtbG5zJTNEJTIyaHR0cCUzQSUyRiUyRnd3dy53My5vcmclMkYyMDAwJTJGc3ZnJTIyJTIwdmlld0JveCUzRCUyMjAlMjAwJTIwNTEyJTIwNTEyJTIyJTNFJTNDcmVjdCUyMHdpZHRoJTNEJTIyNTEyJTIyJTIwaGVpZ2h0JTNEJTIyNTEyJTIyJTIwcnglM0QlMjI5NiUyMiUyMGZpbGwlM0QlMjIlMjMxMjEyMTIlMjIlMkYlM0UlM0N0ZXh0JTIweCUzRCUyMjI1NiUyMiUyMHklM0QlMjIzMDAlMjIlMjB0ZXh0LWFuY2hvciUzRCUyMm1pZGRsZSUyMiUyMGZvbnQtZmFtaWx5JTNEJTIyR2VvcmdpYSUyQ3NlcmlmJTIyJTIwZm9udC1zaXplJTNEJTIyMjAwJTIyJTIwZm9udC13ZWlnaHQlM0QlMjIzMDAlMjIlMjBmaWxsJTNEJTIyJTIzRTJCMTNDJTIyJTIwbGV0dGVyLXNwYWNpbmclM0QlMjIxMiUyMiUzRVQlM0MlMkZ0ZXh0JTNFJTNDcmVjdCUyMHglM0QlMjIxMjglMjIlMjB5JTNEJTIyMzgwJTIyJTIwd2lkdGglM0QlMjIyNTYlMjIlMjBoZWlnaHQlM0QlMjIzJTIyJTIwcnglM0QlMjIxLjUlMjIlMjBmaWxsJTNEJTIyJTIzRTJCMTNDJTIyJTIwb3BhY2l0eSUzRCUyMjAuNSUyMiUyRiUzRSUzQyUyRnN2ZyUzRSIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwicHVycG9zZSI6ImFueSBtYXNrYWJsZSJ9XX0=">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%2296%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22300%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22200%22%20font-weight%3D%22300%22%20fill%3D%22%23E2B13C%22%20letter-spacing%3D%2212%22%3ET%3C%2Ftext%3E%3Crect%20x%3D%22128%22%20y%3D%22380%22%20width%3D%22256%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23E2B13C%22%20opacity%3D%220.5%22%2F%3E%3C%2Fsvg%3E">
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiVE9NRSDigJQgQXVkaW9ib29rIE9yZ2FuaXNlciIsInNob3J0X25hbWUiOiJUT01FIiwic3RhcnRfdXJsIjoiLiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwYjE2MjIiLCJ0aGVtZV9jb2xvciI6IiMwYjE2MjIiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyUyMHhtbG5zJTNEJTIyaHR0cCUzQSUyRiUyRnd3dy53My5vcmclMkYyMDAwJTJGc3ZnJTIyJTIwdmlld0JveCUzRCUyMjAlMjAwJTIwNTEyJTIwNTEyJTIyJTNFJTNDcmVjdCUyMHdpZHRoJTNEJTIyNTEyJTIyJTIwaGVpZ2h0JTNEJTIyNTEyJTIyJTIwcnglM0QlMjI5NiUyMiUyMGZpbGwlM0QlMjIlMjMwYjE2MjIlMjIlMkYlM0UlM0N0ZXh0JTIweCUzRCUyMjI1NiUyMiUyMHklM0QlMjIzMDAlMjIlMjB0ZXh0LWFuY2hvciUzRCUyMm1pZGRsZSUyMiUyMGZvbnQtZmFtaWx5JTNEJTIyR2VvcmdpYSUyQ3NlcmlmJTIyJTIwZm9udC1zaXplJTNEJTIyMjAwJTIyJTIwZm9udC13ZWlnaHQlM0QlMjIzMDAlMjIlMjBmaWxsJTNEJTIyJTIzNEZCOEM5JTIyJTIwbGV0dGVyLXNwYWNpbmclM0QlMjIxMiUyMiUzRVQlM0MlMkZ0ZXh0JTNFJTNDcmVjdCUyMHglM0QlMjIxMjglMjIlMjB5JTNEJTIyMzgwJTIyJTIwd2lkdGglM0QlMjIyNTYlMjIlMjBoZWlnaHQlM0QlMjIzJTIyJTIwcnglM0QlMjIxLjUlMjIlMjBmaWxsJTNEJTIyJTIzNEZCOEM5JTIyJTIwb3BhY2l0eSUzRCUyMjAuNSUyMiUyRiUzRSUzQyUyRnN2ZyUzRSIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwicHVycG9zZSI6ImFueSBtYXNrYWJsZSJ9XX0=">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%2296%22%20fill%3D%22%230b1622%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22300%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22200%22%20font-weight%3D%22300%22%20fill%3D%22%234FB8C9%22%20letter-spacing%3D%2212%22%3ET%3C%2Ftext%3E%3Crect%20x%3D%22128%22%20y%3D%22380%22%20width%3D%22256%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%234FB8C9%22%20opacity%3D%220.5%22%2F%3E%3C%2Fsvg%3E">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+/* Fonts already on the device: no third-party requests (Cormorant / DM Mono still used if installed) */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #121212;
-  --bg-raised: #1a1a1a;
-  --bg-surface: #222222;
-  --bg-hover: #2a2a2a;
-  --gold: #E2B13C;
-  --gold-dim: #E2B13C66;
-  --gold-glow: #E2B13C22;
-  --text: #f0f0f0;
-  --text-dim: #888888;
-  --text-muted: #555555;
-  --danger: #c0392b;
-  --success: #27ae60;
+  /* Dark mode: deep navy, light teal accent, blue highlights */
+  --bg: #0b1622;
+  --bg-raised: #102131;
+  --bg-surface: #182c40;
+  --bg-hover: #20374e;
+  --gold: #4fb8c9;         /* accent (the variable names date from the old gold theme) */
+  --gold-dim: #4fb8c966;
+  --gold-glow: #4fb8c922;
+  --text: #e6eef5;
+  --text-dim: #93a7b8;
+  --text-muted: #5a6e80;
+  --text-soft: #c4d3df;     /* secondary text on the player */
+  --on-gold: #06121c;       /* text on accent buttons and chips */
+  --danger: #d9534f;
+  --success: #3a86d4;       /* blue: offline badges */
   --radius: 8px;
   --radius-lg: 14px;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, 'Cascadia Mono', Consolas, 'Roboto Mono', 'Liberation Mono', monospace;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: dark;
+}
+/* Light mode: cool paper, navy ink, teal accent, blue highlights */
+:root[data-theme="light"] {
+  --bg: #f2f6f9;
+  --bg-raised: #ffffff;
+  --bg-surface: #dde7ee;
+  --bg-hover: #d0dde7;
+  --gold: #0e7185;          /* accent (named for the dark theme's gold) */
+  --gold-dim: #0e718555;
+  --gold-glow: #0e71851a;
+  --text: #0f2236;
+  --text-dim: #45596c;
+  --text-muted: #7b8d9d;
+  --text-soft: #1f3a52;
+  --on-gold: #ffffff;
+  --danger: #b03a2e;
+  --success: #1f64b0;       /* blue: offline badges */
+  color-scheme: light;
 }
 
 html, body {
@@ -119,7 +142,7 @@ input:focus:not(:focus-visible) { outline: none; }
 .login-form .field-group > * { flex: 1; }
 
 .btn {
-  background: var(--gold); color: var(--bg);
+  background: var(--gold); color: var(--on-gold);
   border: none; padding: 12px 24px;
   border-radius: var(--radius); cursor: pointer;
   font-family: var(--font-mono); font-size: 0.85rem;
@@ -190,7 +213,7 @@ input:focus:not(:focus-visible) { outline: none; }
   padding: 4px 12px; font-family: var(--font-mono); font-size: 0.7rem;
   cursor: pointer; white-space: nowrap;
 }
-.source-chip.active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.source-chip.active { color: var(--on-gold); background: var(--gold); border-color: var(--gold); }
 .source-chip.error { border-color: var(--danger); }
 .source-chip .chip-count { opacity: 0.6; margin-left: 4px; }
 
@@ -367,7 +390,7 @@ input:focus:not(:focus-visible) { outline: none; }
   display: flex; align-items: center; justify-content: center;
   font-size: 0.65rem; backdrop-filter: blur(8px);
 }
-.badge-star { background: var(--gold); color: var(--bg); }
+.badge-star { background: var(--gold); color: var(--on-gold); }
 .badge-offline { background: var(--success); color: white; }
 .badge-progress {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -411,10 +434,10 @@ input:focus:not(:focus-visible) { outline: none; }
 }
 .player-btn:hover { color: var(--gold); background: var(--gold-glow); }
 .player-btn.primary {
-  background: var(--gold); color: var(--bg);
+  background: var(--gold); color: var(--on-gold);
   width: 40px; height: 40px; font-size: 1.2rem;
 }
-.player-btn.primary:hover { filter: brightness(1.15); background: var(--gold); color: var(--bg); }
+.player-btn.primary:hover { filter: brightness(1.15); background: var(--gold); color: var(--on-gold); }
 
 /* ── Player Expanded ── */
 #player-expanded {
@@ -444,13 +467,13 @@ input:focus:not(:focus-visible) { outline: none; }
   font-weight: 600;
 }
 .player-exp-author {
-  font-size: 0.8rem; color: #cccccc; margin-top: 4px;
+  font-size: 0.8rem; color: var(--text-soft); margin-top: 4px;
 }
 .player-exp-track {
   font-size: 0.72rem; color: var(--gold); margin-top: 6px;
 }
 .player-exp-desc {
-  font-size: 0.75rem; color: #d8d8d8; margin-top: 12px;
+  font-size: 0.75rem; color: var(--text-soft); margin-top: 12px;
   max-height: 200px; overflow-y: auto; line-height: 1.6;
   text-align: left; padding: 0 16px;
   white-space: pre-line;
@@ -513,10 +536,10 @@ input:focus:not(:focus-visible) { outline: none; }
 }
 .stop-btn {
   font-size: 0.7rem !important; width: 30px; height: 30px;
-  color: #cccccc !important; opacity: 0.8;
+  color: var(--text-soft) !important; opacity: 0.8;
   transition: opacity 0.15s, color 0.15s;
 }
-.stop-btn:hover { opacity: 1; color: #f0f0f0 !important; }
+.stop-btn:hover { opacity: 1; color: var(--text) !important; }
 
 .player-secondary-controls {
   display: flex; justify-content: space-around;
@@ -957,6 +980,7 @@ RewriteRule ^/remote\.php/dav/ - [R=204,L]</pre>
         <button class="player-btn" data-action="manage-sources" title="Storage Sources" aria-label="Manage storage sources">&#x2601;</button>
         <button class="player-btn" data-action="refresh" title="Rescan Library" aria-label="Rescan library">&#x21bb;</button>
         <button class="player-btn" data-action="sleep-modal" title="Sleep Timer" aria-label="Sleep timer">&#x263D;</button>
+        <button class="player-btn" data-action="toggle-theme" id="btn-theme" title="Light mode" aria-label="Switch to light mode">&#x25D0;</button>
         <button class="player-btn" data-action="open-settings" title="Settings" aria-label="Settings">&#x2699;</button>
         <button class="player-btn" data-action="logout" title="Lock" aria-label="Lock">&#x23FB;</button>
       </div>
@@ -1339,6 +1363,7 @@ const PREF_DEFAULTS = Object.freeze({
   surnameSort: true,           // authors/narrators ordered by last name
   onlineCovers: false,         // look up missing covers (sends title + author to Apple / Open Library)
   audioEnhance: 0,             // 0 off, 1 voice clarity, 2 night mode, 3 both (Web Audio)
+  theme: 'dark',               // 'dark' | 'light' — the last one chosen stays
   view: 'grid',                // 'grid' | 'folders'
   excludedFolders: {},         // { [provider.where]: ['Folder/Sub/', ...] } — hidden from library and scans
 });
@@ -1438,7 +1463,7 @@ function cacheDom() {
     'sleep-status', 'btn-sleep-chapter', 'btn-sleep-cancel', 'inp-sleep-custom',
     'modal-settings', 'inp-import', 'modal-storage', 'storage-summary', 'storage-bar',
     'storage-persist', 'storage-list', 'btn-storage-remove-all', 'modal-stats', 'stats-body',
-    'collection-bar', 'modal-collections', 'coll-book', 'coll-list', 'inp-coll-name',
+    'collection-bar', 'modal-collections', 'coll-book', 'coll-list', 'inp-coll-name', 'btn-theme',
     'btn-folders', 'folder-view', 'folder-crumbs', 'folder-list',
     'shelf-chips', 'lib-sort', 'lib-group', 'continue-strip', 'continue-row', 'library-empty', 'btn-finished',
     'vol-slider', 'vol-pct', 'vol-icon',
@@ -3500,10 +3525,12 @@ async function importBackup(file) {
       const v = data.prefs?.[k];
       if (typeof v !== typeof def) continue;
       if (PREF_OPTIONS[k] && !PREF_OPTIONS[k].includes(v)) continue;
+      if (k === 'theme' && !['dark', 'light'].includes(v)) continue;
       if (k === 'excludedFolders' && (Array.isArray(v) || !Object.values(v).every(l => Array.isArray(l) && l.every(x => typeof x === 'string')))) continue;
       S.prefs[k] = v;
     }
     savePrefs();
+    applyTheme();
     if (data.stats && typeof data.stats === 'object') { S.stats = mergeStats(S.stats || loadStats(), data.stats); saveStats(); }
     updateSkipLabels();
     renderSettings();
@@ -5231,6 +5258,24 @@ async function dirSize(dir) {
   return n;
 }
 
+// ── Light / dark theme (the last one chosen is kept in prefs) ──
+function applyTheme() {
+  const light = S.prefs.theme === 'light';
+  if (light) document.documentElement.dataset.theme = 'light';
+  else delete document.documentElement.dataset.theme;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f2f6f9' : '#0b1622');
+  const btn = $['btn-theme'];
+  if (btn) {
+    btn.title = light ? 'Dark mode' : 'Light mode';
+    btn.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+  }
+}
+function toggleTheme() {
+  S.prefs.theme = S.prefs.theme === 'light' ? 'dark' : 'light';
+  savePrefs();
+  applyTheme();
+}
+
 // ══════════════════════════════════════════════════════════════
 //  COLLECTIONS
 //  Named shelves mixing books from any source. Synced in the progress
@@ -6533,6 +6578,7 @@ const actions = {
   'import-backup':      () => $['inp-import'].click(),
   'open-storage':       openStorage,
   'open-stats':         openStats,
+  'toggle-theme':       toggleTheme,
   'collections-modal':  openCollectionsModal,
   'close-collections':  () => $['modal-collections'].classList.remove('active'),
   'create-collection':  createCollectionFromModal,
@@ -6780,6 +6826,7 @@ function bindEvents() {
 
 function init() {
   cacheDom();
+  applyTheme();
   bindEvents();
   updateSkipLabels();
   setupAirPlay();
